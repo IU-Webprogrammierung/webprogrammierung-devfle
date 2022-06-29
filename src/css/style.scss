@@ -1,0 +1,59 @@
+// global color variables
+:root {
+  --navigation-text-color: rgb(51, 51, 51);
+  --website-text-color: rgb(51, 51, 51);
+  --website-background-color: rgb(255, 255, 255);
+}
+
+// remove all user agent default spacing
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0 16px;
+  // TODO: change default font later
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  @media screen and (min-width: 834px) {
+    padding: 0 32px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 0 80px;
+  }
+}
+
+// header and navigation
+.portfolio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__icons {
+    display: flex;
+  }
+
+  &__burger-btn {
+    @media screen and (min-width: 650px) {
+      display: none;
+    }
+  }
+}
+
+.portfolio-navigation {
+  &__wrapper {
+    display: flex;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 8px;
+  }
+
+  &__item > a {
+    text-decoration: none;
+    color: var(--navigation-text-color, rgb(51, 51, 51));
+  }
+}
