@@ -35,11 +35,16 @@ body {
 
   &__icon-wrapper {
     display: flex;
+    align-items: center;
   }
 
   &__icon {
     width: 24px;
-    margin: 0 8px;
+    height: 24px;
+    background: rgb(230, 230, 230);
+    padding: 4px;
+    border-radius: 4px;
+    margin: 0 4px;
 
     &:last-child {
       margin-inline-end: 0;
@@ -74,8 +79,11 @@ body {
   }
 
   @media screen and (min-width: 650px) {
-    position: relative;
+    // TODO: maybe there is a better solution with viewport classes
+    position: static;
     width: auto;
+    visibility: visible;
+    opacity: 1;
   }
 
   &__wrapper {
