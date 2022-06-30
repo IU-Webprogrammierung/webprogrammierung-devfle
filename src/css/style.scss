@@ -33,6 +33,11 @@ body {
   justify-content: space-between;
   padding: 12px 0;
 
+  &__logo {
+    flex: 0 1 100px;
+    fill: inherit;
+  }
+
   &__icon-wrapper {
     display: flex;
     align-items: center;
