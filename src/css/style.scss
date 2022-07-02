@@ -14,6 +14,9 @@
 
 body {
   padding: 0 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   // TODO: change default font later
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 
@@ -148,4 +151,11 @@ body {
       order: 2;
     }
   }
+}
+
+.footer {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: flex-end;
+  padding-block-end: 8px;
 }
