@@ -125,9 +125,27 @@ body {
 
   &__headline {
     font-size: clamp(3.5rem, 5vw, 6rem);
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: lightgray;
+    transform: translateY(-100px);
+    position: relative;
+    z-index: 1;
+    order: 2;
+
+    @media screen and (min-width: 880px) {
+      transform: translateY(0);
+      background: transparent;
+      order: 1;
+    }
   }
 
   &__voxel {
     margin: 0 auto;
+    order: 1;
+
+    @media screen and (min-width: 880px) {
+      order: 2;
+    }
   }
 }
