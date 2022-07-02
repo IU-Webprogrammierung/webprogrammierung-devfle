@@ -121,13 +121,13 @@ body {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-items: center;
 
   &__headline {
     font-size: clamp(3.5rem, 5vw, 6rem);
   }
 
   &__voxel {
-    height: 250px;
-    background: lightblue;
+    margin: 0 auto;
   }
 }
