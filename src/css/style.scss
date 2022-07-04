@@ -15,6 +15,8 @@
 body {
   padding: 0 16px;
   min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   // TODO: change default font later
@@ -122,12 +124,18 @@ body {
 .content {
   margin-block-start: 32px;
   display: grid;
-  gap: 16px;
+  gap: 8px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   align-items: center;
 
+  @media screen and (min-width: 880px) {
+    flex: 1 0 auto;
+    margin-block-start: 0;
+    margin-block-end: 56px;
+  }
+
   &__headline {
-    font-size: clamp(3.5rem, 5vw, 6rem);
+    font-size: clamp(4rem, 5vw, 6rem);
     padding: 8px 16px;
     border-radius: 8px;
     background: lightgray;
@@ -158,4 +166,8 @@ body {
   display: flex;
   align-items: flex-end;
   padding-block-end: 8px;
+
+  &__text {
+    font-weight: 600;
+  }
 }
