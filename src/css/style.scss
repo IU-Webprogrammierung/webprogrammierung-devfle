@@ -1,9 +1,12 @@
 // global color variables
 :root {
-  --navigation-text-color: rgb(51, 51, 51);
-  --website-text-color: rgb(51, 51, 51);
-  --website-background-color: rgb(255, 255, 255);
-  --navigation-active-color: rgb(142, 73, 186);
+  --primary-color: #649fa1;
+  --primary-variant-color: #c2eced;
+  --primary-contrast-color: #fff;
+
+  --secondary-color: #edd3c2;
+  --secondary-variant-color: #fff2eb;
+  --secondary-contrast-color: #333;
 }
 
 // remove all user agent default spacing
@@ -21,6 +24,7 @@ body {
   flex-direction: column;
   // TODO: change default font later
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: var(--secondary-variant-color);
 
   @media screen and (min-width: 834px) {
     padding: 0 32px;
@@ -51,7 +55,8 @@ body {
   &__icon {
     width: 24px;
     height: 24px;
-    background: rgb(230, 230, 230);
+    background: var(--primary-color);
+    fill: var(--primary-contrast-color);
     padding: 4px;
     border-radius: 4px;
     margin: 0 4px;
@@ -77,7 +82,7 @@ body {
   right: 16px;
   top: 50px;
   transition: visibility 0.25s ease-in-out, opacity 0.25s ease-in-out;
-  background: rgb(230, 230, 230);
+  background: var(--secondary-color);
   visibility: hidden;
   opacity: 0;
   z-index: 1;
@@ -108,16 +113,19 @@ body {
 
   &__item {
     padding: 12px 16px;
-    color: var(--navigation-text-color, rgb(51, 51, 51));
+    color: var(--secondary-contrast-color);
   }
 
-  &__item--active {
-    color: var(--navigation-active-color);
+  &__item--active,
+  &__item:hover > a {
+    color: var(--primary-color);
   }
 
   &__item > a {
     text-decoration: none;
     color: inherit;
+    font-weight: 600;
+    transition: color 0.2s linear;
   }
 }
 
@@ -138,7 +146,8 @@ body {
     font-size: clamp(4rem, 5vw, 6rem);
     padding: 8px 16px;
     border-radius: 8px;
-    background: lightgray;
+    background: var(--secondary-color);
+    color: var(--secondary-contrast-color);
     transform: translateY(-100px);
     position: relative;
     z-index: 1;
