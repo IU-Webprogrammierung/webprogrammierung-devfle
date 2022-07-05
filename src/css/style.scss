@@ -60,6 +60,8 @@ body {
     padding: 4px;
     border-radius: 4px;
     margin: 0 4px;
+    display: flex;
+    justify-content: center;
 
     &:last-child {
       margin-inline-end: 0;
