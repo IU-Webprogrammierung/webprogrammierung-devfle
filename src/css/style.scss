@@ -170,6 +170,28 @@ body {
       order: 2;
     }
   }
+
+  &--blog {
+    grid-template-columns: minmax(320px, 680px);
+    justify-content: center;
+
+    .blog-entry {
+      margin-block-end: 24px;
+
+      &:first-child {
+        margin-block-start: 40px;
+      }
+    }
+
+    h1 {
+      margin-block-end: 4px;
+    }
+
+    span {
+      display: block;
+      margin-block-end: 8px;
+    }
+  }
 }
 
 .footer {
