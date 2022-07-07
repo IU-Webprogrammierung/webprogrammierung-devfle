@@ -181,6 +181,10 @@ body {
       &:first-child {
         margin-block-start: 40px;
       }
+
+      &:last-child {
+        margin-block-end: 40px;
+      }
     }
 
     h1 {
@@ -190,6 +194,7 @@ body {
     span {
       display: block;
       margin-block-end: 8px;
+      color: #757575;
     }
   }
 }
