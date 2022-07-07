@@ -9,6 +9,10 @@ Welcome to my project repository. Here lies the source code for my portfolio web
 - Three.js
 - Markdown
 
+#### Testes and supported Browser:
+- Google Chrome
+- Firefox
+
 <br />
 
 #### The commit messages were created using the following scheme:
