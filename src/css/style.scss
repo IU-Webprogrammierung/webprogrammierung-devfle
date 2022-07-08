@@ -171,20 +171,23 @@ body {
     }
   }
 
+  .blog-entry,
+  .project-item {
+    &:first-child {
+      margin-block-start: 40px;
+    }
+
+    &:last-child {
+      margin-block-end: 40px;
+    }
+  }
+
   &--blog {
     grid-template-columns: minmax(320px, 680px);
     justify-content: center;
 
     .blog-entry {
       margin-block-end: 24px;
-
-      &:first-child {
-        margin-block-start: 40px;
-      }
-
-      &:last-child {
-        margin-block-end: 40px;
-      }
 
       &__title {
         margin-block-end: 4px;
@@ -200,6 +203,26 @@ body {
 
   &--home {
     flex: 1 0 auto;
+    
+  &--projects {
+    gap: 24px;
+    .project-item {
+      @media screen and (min-width: 850px) {
+        &:first-child,
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      &__image {
+        background: lightgrey;
+        height: 190px;
+      }
+
+      &__headline {
+        margin-block-start: 8px;
+      }
+    }
   }
 }
 
