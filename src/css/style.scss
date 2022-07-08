@@ -1,0 +1,184 @@
+// global color variables
+:root {
+  --primary-color: #649fa1;
+  --primary-variant-color: #c2eced;
+  --primary-contrast-color: #fff;
+
+  --secondary-color: #edd3c2;
+  --secondary-variant-color: #fff2eb;
+  --secondary-contrast-color: #333;
+}
+
+// remove all user agent default spacing
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0 16px;
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  // TODO: change default font later
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: var(--secondary-variant-color);
+
+  @media screen and (min-width: 834px) {
+    padding: 0 32px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 0 80px;
+  }
+}
+
+// header and navigation
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+
+  &__logo {
+    flex: 0 1 100px;
+    fill: inherit;
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    background: var(--primary-color);
+    fill: var(--primary-contrast-color);
+    padding: 4px;
+    border-radius: 4px;
+    margin: 0 4px;
+    display: flex;
+    justify-content: center;
+
+    &:last-child {
+      margin-inline-end: 0;
+    }
+  }
+
+  &__burger-btn {
+    cursor: pointer;
+
+    @media screen and (min-width: 650px) {
+      display: none;
+    }
+  }
+}
+
+.navigation {
+  position: fixed;
+  min-width: 180px;
+  text-align: right;
+  right: 16px;
+  top: 50px;
+  transition: visibility 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  background: var(--secondary-color);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  border-radius: 8px;
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 650px) {
+    // TODO: maybe there is a better solution with viewport classes
+    position: static;
+    width: auto;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    @media screen and (min-width: 650px) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    padding: 12px 16px;
+    color: var(--secondary-contrast-color);
+  }
+
+  &__item--active,
+  &__item:hover > a {
+    color: var(--primary-color);
+  }
+
+  &__item > a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    transition: color 0.2s linear;
+  }
+}
+
+.content {
+  margin-block-start: 32px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-items: center;
+
+  @media screen and (min-width: 880px) {
+    flex: 1 0 auto;
+    margin-block-start: 0;
+    margin-block-end: 56px;
+  }
+
+  &__headline {
+    font-size: clamp(4rem, 5vw, 6rem);
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: var(--secondary-color);
+    color: var(--secondary-contrast-color);
+    transform: translateY(-100px);
+    position: relative;
+    z-index: 1;
+    order: 2;
+
+    @media screen and (min-width: 880px) {
+      transform: translateY(0);
+      background: transparent;
+      order: 1;
+    }
+  }
+
+  &__voxel {
+    margin: 0 auto;
+    order: 1;
+
+    @media screen and (min-width: 880px) {
+      order: 2;
+    }
+  }
+}
+
+.footer {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: flex-end;
+  padding-block-end: 8px;
+
+  &__text {
+    font-weight: 600;
+  }
+}
