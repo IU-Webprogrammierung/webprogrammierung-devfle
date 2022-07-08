@@ -3,7 +3,7 @@ import blogData from "./../json/blog-data.json" assert { type: "json" };
 const blogWrapper = document.querySelector(".content");
 
 const createBlogEntry = (blogEntry) => {
-  const blogEntryWrapper = document.createElement("div");
+  const blogEntryWrapper = document.createElement("article");
   const blogEntryTitle = document.createElement("h1");
   const blogEntryTitleTextNode = document.createTextNode(blogEntry.title);
 
@@ -22,6 +22,9 @@ const createBlogEntry = (blogEntry) => {
   blogEntryContent.appendChild(blogEntryContentTextNode);
   blogEntryWrapper.appendChild(blogEntryContent);
 
+  blogEntryInfo.classList.add("blog-entry__info");
+  blogEntryTitle.classList.add("blog-entry__title");
+  blogEntryContent.classList.add("blog-entry__content");
   blogEntryWrapper.classList.add("blog-entry");
   return blogEntryWrapper;
 };

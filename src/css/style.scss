@@ -185,16 +185,16 @@ body {
       &:last-child {
         margin-block-end: 40px;
       }
-    }
 
-    h1 {
-      margin-block-end: 4px;
-    }
+      &__title {
+        margin-block-end: 4px;
+      }
 
-    span {
-      display: block;
-      margin-block-end: 8px;
-      color: #757575;
+      &__info {
+        display: block;
+        margin-block-end: 8px;
+        color: #757575;
+      }
     }
   }
 }
