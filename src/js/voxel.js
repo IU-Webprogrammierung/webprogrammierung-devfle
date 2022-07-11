@@ -33,7 +33,7 @@ mouseControls.autoRotate = true;
 mouseControls.target = target;
 
 // load voxel char and set position and size
-const dynmaicEndpoint = window.location?.href + '/media/voxel/character.glb';
+const dynmaicEndpoint = window.location?.href?.substring(0, window.location?.href?.lastIndexOf('/')) + '/media/voxel/character.glb';
 loader.load(dynmaicEndpoint, async (gltf) => {
   const voxelChar = gltf.scene;
   voxelChar.name = 'daniel_portfolio_work';
