@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Devfle - Portfolio</title>
-    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Devfle - Blog</title>
+    <link rel="stylesheet" href="./../css/style.css" />
   </head>
   <body>
     <header class="header">
-      <a class="header__logo" href="./index.html"
+      <a class="header__logo" href="./../../index.html"
         ><svg role="img" aria-labelledby="logo-a11y" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 356.688 74.063">
           <title id="logo-a11y">website logo</title>
           <path
@@ -20,8 +20,8 @@
       </a>
       <nav class="navigation">
         <ul class="navigation__wrapper">
-          <li class="navigation__item navigation__item--active"><a href="./index.html">Home</a></li>
-          <li class="navigation__item"><a href="./src/html/blog.html">Blog</a></li>
+          <li class="navigation__item"><a href="./../../index.html">Home</a></li>
+          <li class="navigation__item navigation__item--active"><a href="#">Blog</a></li>
           <li class="navigation__item"><a href="#">About</a></li>
           <li class="navigation__item"><a href="#">Portfolio</a></li>
         </ul>
@@ -53,23 +53,11 @@
         </div>
       </div>
     </header>
-    <main class="content">
-      <h1 class="content__headline">
-        HI 👋 <br />
-        I'M DANIEL <br />
-        WEBDEVELOPER
-      </h1>
-      <div class="content__voxel"></div>
-    </main>
+    <main class="content content--blog"></main>
     <footer class="footer">
       <span class="footer__text">DESIGNED WITH ❤️ IN 2022</span>
     </footer>
-    <script src="./src/js/index.js"></script>
-
-    <!-- TODO: maybe i can reduce the requests and squash some files together or use es6 import syntax -->
-    <script src="./lib/threejs/index.js"></script>
-    <script src="./lib/threejs/controls.js"></script>
-    <script src="./lib/threejs/loader.js"></script>
-    <script src="./src/js/voxel.js"></script>
+    <script src="./../js/index.js"></script>
+    <script type="module" src="./../js/blog.js"></script>
   </body>
 </html>

@@ -1,9 +1,9 @@
 if (!THREE || !THREE?.GLTFLoader || !THREE?.OrbitControls) {
-  throw new Error("ThreeJs or one of it modules could not be loaded.");
+  throw new Error('ThreeJs or one of it modules could not be loaded.');
 }
 
 // get container where voxel char should be mounted
-const voxelContainer = document.querySelector(".content__voxel");
+const voxelContainer = document.querySelector('.content__voxel');
 
 // create new scene instance
 const scene = new THREE.Scene();
@@ -33,9 +33,10 @@ mouseControls.autoRotate = true;
 mouseControls.target = target;
 
 // load voxel char and set position and size
-loader.load("./../../media/voxel/character.glb", async (gltf) => {
+const dynmaicEndpoint = window.location?.href?.substring(0, window.location?.href?.lastIndexOf('/')) + '/media/voxel/character.glb';
+loader.load(dynmaicEndpoint, async (gltf) => {
   const voxelChar = gltf.scene;
-  voxelChar.name = "daniel_portfolio_work";
+  voxelChar.name = 'daniel_portfolio_work';
   await voxelChar.scale.set(0.5, 0.5, 0.5);
   await voxelChar.position.set(0, 1, 0);
 
