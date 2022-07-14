@@ -12,6 +12,7 @@ Welcome to my project repository. Here lies the source code for my portfolio web
 #### Testes and supported Browser:
 - Google Chrome
 - Firefox
+- Safari
 
 <br />
 
