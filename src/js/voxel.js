@@ -18,7 +18,8 @@ voxelCamera.lookAt(target);
 
 // create new webgl renderer instance and add html canvas to dom
 const renderer = new THREE.WebGLRenderer({ alpha: true });
-renderer.setSize(400, 400);
+const voxelSize = window.innerWidth < 432 ? 320 : 400;
+renderer.setSize(voxelSize, voxelSize);
 voxelContainer.appendChild(renderer.domElement);
 
 // initialize loader

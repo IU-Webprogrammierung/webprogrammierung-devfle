@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   // TODO: change default font later
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background: var(--secondary-variant-color);
 
   @media screen and (min-width: 834px) {
@@ -135,7 +135,7 @@ body {
   margin-block-start: 32px;
   display: grid;
   gap: 8px;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   align-items: center;
 
   @media screen and (min-width: 880px) {
@@ -145,7 +145,7 @@ body {
   }
 
   &__headline {
-    font-size: clamp(4rem, 5vw, 6rem);
+    font-size: clamp(2.8rem, 5vw, 6rem);
     padding: 8px 16px;
     border-radius: 8px;
     background: var(--secondary-color);
