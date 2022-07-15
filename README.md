@@ -6,6 +6,7 @@ Welcome to my project repository. Here lies the source code for my portfolio web
 - HTML5
 - SCSS (CSS3)
 - JS (es6+)
+- JSON
 - Three.js
 - Markdown
 
