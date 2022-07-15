@@ -145,12 +145,12 @@ body {
   }
 
   &__headline {
-    font-size: clamp(2.8rem, 5vw, 6rem);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
     padding: 8px 16px;
     border-radius: 8px;
     background: var(--secondary-color);
     color: var(--secondary-contrast-color);
-    transform: translateY(-100px);
+    transform: translateY(-130px);
     position: relative;
     z-index: 1;
     order: 2;
@@ -196,6 +196,10 @@ body {
         color: #757575;
       }
     }
+  }
+
+  &--home {
+    flex: 1 0 auto;
   }
 }
 
