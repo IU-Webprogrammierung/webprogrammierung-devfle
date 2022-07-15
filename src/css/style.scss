@@ -137,11 +137,11 @@ body {
   gap: 8px;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   align-items: center;
+  flex: 1 0 auto;
 
   @media screen and (min-width: 880px) {
-    flex: 1 0 auto;
-    margin-block-start: 0;
-    margin-block-end: 56px;
+    //margin-block-start: 0;
+    //margin-block-end: 56px;
   }
 
   &__headline {
@@ -173,10 +173,6 @@ body {
 
   .blog-entry,
   .project-item {
-    &:first-child {
-      margin-block-start: 40px;
-    }
-
     &:last-child {
       margin-block-end: 40px;
     }
@@ -205,6 +201,7 @@ body {
     flex: 1 0 auto;
     
   &--projects {
+    align-content: flex-start;
     gap: 24px;
     .project-item {
       @media screen and (min-width: 850px) {
@@ -227,7 +224,6 @@ body {
 }
 
 .footer {
-  flex: 1 0 auto;
   display: flex;
   align-items: flex-end;
   padding-block-end: 8px;
