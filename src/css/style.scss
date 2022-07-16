@@ -194,7 +194,7 @@ body {
         opacity: 1;
         top: 50%;
 
-        + div::after {
+        ~ h2::after {
           content: '';
           height: 100vh;
           width: 100vw;
@@ -259,37 +259,40 @@ body {
 
   &--home {
     flex: 1 0 auto;
-    
-  &--projects {
-    align-content: flex-start;
-    gap: 24px;
-    .project-item {
-      @media screen and (min-width: 850px) {
-        &:first-child,
-        &:last-child {
-          margin: 0;
+
+    &--projects {
+      align-content: flex-start;
+      gap: 32px;
+      .project-item {
+        justify-self: center;
+        @media screen and (min-width: 850px) {
+          &:first-child,
+          &:last-child {
+            margin: 0;
+          }
         }
-      }
 
-      &__image {
-        background: lightgrey;
-        height: 190px;
-      }
+        &__image {
+          height: 190px;
+          max-width: 100%;
+          border-radius: 8px;
+        }
 
-      &__headline {
-        margin: 8px 0;
+        &__headline {
+          margin: 4px 0;
+        }
       }
     }
   }
-}
 
-.footer {
-  display: flex;
-  align-items: flex-end;
-  padding-block-end: 8px;
-  flex: 1 0 auto;
+  .footer {
+    display: flex;
+    align-items: flex-end;
+    padding-block-end: 8px;
+    flex: 1 0 auto;
 
-  &__text {
-    font-weight: 600;
+    &__text {
+      font-weight: 600;
+    }
   }
 }
