@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   // TODO: change default font later
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background: var(--secondary-variant-color);
 
   @media screen and (min-width: 834px) {
@@ -135,22 +135,16 @@ body {
   margin-block-start: 32px;
   display: grid;
   gap: 8px;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   align-items: center;
 
-  @media screen and (min-width: 880px) {
-    flex: 1 0 auto;
-    margin-block-start: 0;
-    margin-block-end: 56px;
-  }
-
   &__headline {
-    font-size: clamp(4rem, 5vw, 6rem);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
     padding: 8px 16px;
     border-radius: 8px;
     background: var(--secondary-color);
     color: var(--secondary-contrast-color);
-    transform: translateY(-100px);
+    transform: translateY(-130px);
     position: relative;
     z-index: 1;
     order: 2;
@@ -171,20 +165,87 @@ body {
     }
   }
 
+  .project-item {
+    cursor: pointer;
+
+    &-popup {
+      box-sizing: border-box;
+      border-radius: 8px;
+      visibility: hidden;
+      opacity: 0;
+      position: fixed;
+      min-height: 250px;
+      max-width: 650px;
+      width: 95%;
+      left: 50%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      margin: auto;
+      background: var(--secondary-color);
+      z-index: 3;
+      transition: top 0.25s linear, visibility 0.25s ease-in-out, opacity 0.25s ease-in-out;
+      padding: 16px 32px;
+      display: flex;
+      flex-direction: column;
+      cursor: initial;
+
+      &--visible {
+        visibility: visible;
+        opacity: 1;
+        top: 50%;
+
+        ~ h2::after {
+          content: '';
+          height: 100vh;
+          width: 100vw;
+          background: #000;
+          opacity: 0.7;
+          display: block;
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 2;
+        }
+      }
+
+      &__headline {
+        margin-block-end: 8px;
+      }
+
+      &__button {
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        align-self: flex-end;
+        padding: 8px 16px;
+        color: #fff;
+        border-radius: 4px;
+        background: var(--primary-color);
+      }
+
+      &__text {
+        flex: 1 0 auto;
+      }
+    }
+  }
+
+  .blog-entry,
+  .project-item {
+    &:last-child {
+      margin-block-end: 40px;
+    }
+  }
+
+  &--home {
+    flex: 1 0 auto;
+  }
+
   &--blog {
     grid-template-columns: minmax(320px, 680px);
     justify-content: center;
 
     .blog-entry {
       margin-block-end: 24px;
-
-      &:first-child {
-        margin-block-start: 40px;
-      }
-
-      &:last-child {
-        margin-block-end: 40px;
-      }
 
       &__title {
         margin-block-end: 4px;
@@ -197,13 +258,38 @@ body {
       }
     }
   }
+
+  &--projects {
+    align-content: flex-start;
+    gap: 32px;
+    .project-item {
+      justify-self: center;
+
+      &__image {
+        height: 190px;
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.18);
+      }
+
+      &__headline {
+        margin: 4px 0;
+      }
+
+      @media screen and (min-width: 1085px) {
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 
 .footer {
-  flex: 1 0 auto;
   display: flex;
   align-items: flex-end;
   padding-block-end: 8px;
+  flex: 1 0 auto;
 
   &__text {
     font-weight: 600;
