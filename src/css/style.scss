@@ -255,25 +255,21 @@ body {
     }
   }
 
-  &--home {
-    flex: 1 0 auto;
-
-    &--projects {
-      align-content: flex-start;
-      gap: 32px;
-      .project-item {
-        justify-self: center;
-        @media screen and (min-width: 850px) {
-          &:first-child,
-          &:last-child {
-            margin: 0;
-          }
+  &--projects {
+    align-content: flex-start;
+    gap: 32px;
+    .project-item {
+      justify-self: center;
+      @media screen and (min-width: 1085px) {
+        &:last-child {
+          margin: 0;
         }
 
         &__image {
           height: 190px;
           max-width: 100%;
           border-radius: 8px;
+          box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.18);
         }
 
         &__headline {
