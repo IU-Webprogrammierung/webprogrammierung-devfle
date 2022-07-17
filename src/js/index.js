@@ -8,25 +8,30 @@ if (!!burgerBtn && !!navigation) {
   });
 }
 
-let darkModeSettings = JSON.parse(window.localStorage.getItem('darkModeState'));
+let darkModeSettings = JSON.parse(window.localStorage.getItem('darkModeState')) ?? window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-if (darkModeSettings) {
-  document.documentElement.classList.add('darkmode--on');
-}
-
-// null is been returned if darkmode toggle is been never used
-if (darkModeSettings === null) {
-  darkModeSettings = false;
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+/** Helper function to set the darkmode.
+ *
+ * @param {boolean} darkModeState - the new darkmode state
+ * @return {void}
+ */
+const setDarkMode = (darkModeState) => {
+  if (darkModeState) {
     document.documentElement.classList.add('darkmode--on');
     darkModeSettings = true;
+    return;
   }
+
+  document.documentElement.classList.remove('darkmode--on');
+  darkModeSettings = false;
+};
+
+if (darkModeSettings) {
+  setDarkMode(true);
 }
 
 const darkModeButton = document.querySelector('.header__icon--darkmode');
 darkModeButton.addEventListener('click', () => {
-  console.log(darkModeSettings);
-  darkModeSettings = !darkModeSettings;
+  setDarkMode(!darkModeSettings);
   window.localStorage.setItem('darkModeState', darkModeSettings);
-  document.documentElement.classList.toggle('darkmode--on');
 });
