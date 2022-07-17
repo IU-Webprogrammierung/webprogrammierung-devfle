@@ -9,6 +9,16 @@
   --secondary-contrast-color: #333;
 }
 
+:root.darkmode--on {
+  --primary-color: #649fa1;
+  --primary-variant-color: #c2eced;
+  --primary-contrast-color: #fff;
+
+  --secondary-color: #303030;
+  --secondary-variant-color: #212121;
+  --secondary-contrast-color: #fff;
+}
+
 // remove all user agent default spacing
 * {
   margin: 0;
@@ -25,6 +35,7 @@ body {
   // TODO: change default font later
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background: var(--secondary-variant-color);
+  color: var(--secondary-contrast-color);
 
   @media screen and (min-width: 834px) {
     padding: 0 32px;
@@ -44,7 +55,7 @@ body {
 
   &__logo {
     flex: 0 1 100px;
-    fill: inherit;
+    fill: var(--secondary-contrast-color);
   }
 
   &__icon-wrapper {
@@ -62,6 +73,7 @@ body {
     margin: 0 4px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 
     &:last-child {
       margin-inline-end: 0;
@@ -69,8 +81,6 @@ body {
   }
 
   &__burger-btn {
-    cursor: pointer;
-
     @media screen and (min-width: 650px) {
       display: none;
     }
