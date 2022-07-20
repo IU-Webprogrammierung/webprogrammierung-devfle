@@ -319,8 +319,8 @@ h6 {
         min-height: 32px;
         background: transparent;
         border: none;
-        color: var(--primary-contrast-color);
-        border-bottom: 1px solid var(--primary-contrast-color);
+        color: var(--secondary-contrast-color);
+        border-bottom: 1px solid var(--secondary-contrast-color);
         font-size: 16px;
         transition: border-bottom-color 0.2s ease-in-out;
 
@@ -339,11 +339,11 @@ h6 {
         min-height: 45px;
         background: transparent;
         border: none;
-        color: var(--primary-contrast-color);
+        color: var(--primary-color);
         font-size: 16px;
         text-transform: uppercase;
         font-weight: 600;
-        border: 1.5px solid var(--primary-contrast-color);
+        border: 1.5px solid var(--primary-color);
         transition: all 0.25s linear;
         cursor: pointer;
         border-radius: 4px;
