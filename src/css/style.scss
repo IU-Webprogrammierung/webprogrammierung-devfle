@@ -365,14 +365,30 @@ h6 {
 
       &__bar {
         height: 22px;
-        background: rgb(186, 186, 186);
+        background: var(--secondary-color);
+        margin-block-end: 16px;
 
         &::after {
-          background: rgb(110, 110, 110);
+          background: var(--primary-color);
           height: 100%;
-          width: 50%;
           display: block;
           content: '';
+        }
+
+        &--react::after {
+          width: 90%;
+        }
+
+        &--vue::after {
+          width: 75%;
+        }
+
+        &--node::after {
+          width: 85%;
+        }
+
+        &--php::after {
+          width: 70%;
         }
       }
     }
