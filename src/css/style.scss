@@ -306,8 +306,18 @@ h6 {
   }
 
   &--about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     section {
       margin: 32px 0;
+      display: grid;
+    }
+
+    .content__contact {
+      max-width: 550px;
+      width: 100%;
     }
 
     .contact {
@@ -358,6 +368,14 @@ h6 {
     .content__about-text,
     .content__quote {
       text-align: center;
+      max-width: 750px;
+    }
+
+    .content__skills,
+    .content__experience {
+      //grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+      gap: 32px;
     }
 
     .skill {
