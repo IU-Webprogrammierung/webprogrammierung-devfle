@@ -311,8 +311,12 @@ h6 {
     align-items: center;
 
     section {
-      margin: 32px 0;
+      margin: 42px 0;
       display: grid;
+
+      @media screen and (min-width: 736px) {
+        margin: 72px 0;
+      }
     }
 
     .content__contact {
@@ -373,9 +377,12 @@ h6 {
 
     .content__skills,
     .content__experience {
-      //grid-template-columns: 1fr 1fr;
-      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
+
+      @media screen and (min-width: 890px) {
+        gap: 72px;
+      }
     }
 
     .skill {
@@ -412,6 +419,12 @@ h6 {
     }
 
     .content__experience .experience-list {
+      order: 2;
+
+      @media screen and (min-width: 850px) {
+        order: initial;
+      }
+
       &__item {
         padding: 14px 16px;
         background: var(--secondary-color);
