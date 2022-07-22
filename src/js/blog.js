@@ -1,6 +1,6 @@
 const createBlogEntry = (blogEntry) => {
   const blogEntryWrapper = document.createElement('article');
-  const blogEntryTitle = document.createElement('h1');
+  const blogEntryTitle = document.createElement('h3');
   const blogEntryTitleTextNode = document.createTextNode(blogEntry.title);
 
   const blogEntryContent = document.createElement('p');

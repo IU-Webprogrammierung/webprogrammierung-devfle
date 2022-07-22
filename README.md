@@ -10,7 +10,7 @@ Welcome to my project repository. Here lies the source code for my portfolio web
 - Three.js
 - Markdown
 
-#### Testes and supported Browser:
+#### Tested and supported browser:
 - Google Chrome
 - Firefox
 - Safari

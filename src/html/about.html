@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Devfle - Blog</title>
+    <title>Devfle - About</title>
     <link rel="stylesheet" href="./../css/style.css" />
   </head>
   <body>
@@ -21,8 +21,8 @@
       <nav class="navigation">
         <ul class="navigation__wrapper">
           <li class="navigation__item"><a href="./../../index.html">Home</a></li>
-          <li class="navigation__item navigation__item--active"><a href="./blog.html">Blog</a></li>
-          <li class="navigation__item"><a href="./about.html">About</a></li>
+          <li class="navigation__item"><a href="./blog.html">Blog</a></li>
+          <li class="navigation__item navigation__item--active"><a href="./about.html">About</a></li>
           <li class="navigation__item"><a href="./projects.html">Portfolio</a></li>
         </ul>
       </nav>
@@ -53,11 +53,78 @@
         </div>
       </div>
     </header>
-    <main class="content content--blog"></main>
+    <main class="content content--about">
+      <section class="content__about-text">
+        <h1 class="content__about-headline">About me</h1>
+        <p class="content__about-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi sequi rerum tempora vero. Earum ducimus sint culpa minima eius aliquam iure, veritatis nostrum possimus accusamus eveniet esse
+          vel distinctio aliquid?
+        </p>
+      </section>
+      <section class="content__skills">
+        <div class="skill-info">
+          <h2 class="skill-info__headline">My Skills</h2>
+          <p class="skill-info__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sapiente officiis est neque non excepturi facilis sit quae nesciunt officia, facere ad architecto quisquam eius rerum
+            accusantium vel, odio ratione.
+          </p>
+        </div>
+        <div class="skill">
+          <h4 class="skill__headline">React</h4>
+          <div class="skill__bar skill__bar--react"></div>
+          <h4 class="skill__headline">NodeJS</h4>
+          <div class="skill__bar skill__bar--node"></div>
+          <h4 class="skill__headline">Vue</h4>
+          <div class="skill__bar skill__bar--vue"></div>
+          <h4 class="skill__headline">PHP</h4>
+          <div class="skill__bar skill__bar--php"></div>
+        </div>
+      </section>
+      <section class="content__quote">
+        <h2 class="content__quote-headline">My favorite quote</h2>
+        <p class="content__quote-text">
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit minus nemo omnis exercitationem saepe quia, modi dicta pariatur nesciunt animi explicabo ratione.
+          Reprehenderit, rem necessitatibus explicabo debitis in velit!"
+        </p>
+      </section>
+      <section class="content__experience">
+        <div class="experience-list">
+          <div class="experience-list__item">
+            <h4 class="experience-list__headline">Webdeveloper</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe fugit optio quas officia rem omnis dolor aspernatur quos recusandae similique, nesciunt sed veniam possimus cupiditate
+              ipsa iste aliquid porro doloribus?
+            </p>
+          </div>
+          <div class="experience-list__item">
+            <h4 class="experience-list__headline">UX Design</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe fugit optio quas officia rem omnis dolor aspernatur quos recusandae similique, nesciunt sed veniam possimus cupiditate
+              ipsa iste aliquid porro doloribus?
+            </p>
+          </div>
+        </div>
+        <div class="experience-text">
+          <h2>My Experience</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem unde neque hic quidem veritatis, nostrum eveniet itaque cumque. Impedit, nemo ducimus? Quo, perferendis. Possimus
+            soluta maiores pariatur voluptates repellat dicta?
+          </p>
+        </div>
+      </section>
+      <section class="content__contact">
+        <h2 style="text-align: center">Get in touch with me</h2>
+        <form class="contact">
+          <input placeholder="Name" class="contact__input" type="text" />
+          <input placeholder="E-Mail" class="contact__input" type="text" />
+          <textarea placeholder="Message" class="contact__input contact__textarea"></textarea>
+          <input value="Send" class="contact__button" type="button" />
+        </form>
+      </section>
+    </main>
     <footer class="footer">
       <span class="footer__text">DESIGNED WITH ❤️ IN 2022</span>
     </footer>
     <script src="./../js/index.js"></script>
-    <script type="module" src="./../js/blog.js"></script>
   </body>
 </html>
