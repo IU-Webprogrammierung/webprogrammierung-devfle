@@ -34,7 +34,8 @@ body {
   flex-direction: column;
   // TODO: change default font later
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-  font-size: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
   background: var(--secondary-variant-color);
   color: var(--secondary-contrast-color);
 
@@ -50,37 +51,41 @@ body {
 h1,
 h2,
 h3 {
+  line-height: 1.25;
   margin-block-end: 12px;
+  text-transform: uppercase;
 }
 
 h4,
 h5,
 h6 {
+  line-height: 1.5;
   margin-block-end: 8px;
+  text-transform: uppercase;
 }
 
 h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.45rem;
 }
 
 h4 {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 0.95rem;
 }
 
 h6 {
-  font-size: 1.1rem;
+  font-size: 0.65rem;
 }
 
 // header and navigation
@@ -260,7 +265,7 @@ h6 {
 
       &__button {
         border: none;
-        font-size: 1rem;
+        font-size: 0.9rem;
         cursor: pointer;
         align-self: flex-end;
         padding: 8px 16px;
@@ -363,7 +368,7 @@ h6 {
         border: none;
         color: var(--secondary-contrast-color);
         border-bottom: 1px solid var(--secondary-contrast-color);
-        font-size: 1rem;
+        font-size: 0.9rem;
         transition: border-bottom-color 0.2s ease-in-out;
 
         &:focus {
@@ -382,7 +387,7 @@ h6 {
         background: transparent;
         border: none;
         color: var(--primary-color);
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-transform: uppercase;
         font-weight: 600;
         border: 1.5px solid var(--primary-color);
