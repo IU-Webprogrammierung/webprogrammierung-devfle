@@ -311,7 +311,7 @@ h6 {
     align-items: center;
 
     section {
-      margin: 42px 0;
+      margin: 52px 0;
       display: grid;
 
       @media screen and (min-width: 736px) {
@@ -398,22 +398,28 @@ h6 {
           height: 100%;
           display: block;
           content: '';
+          width: 0%;
+          transition: width 0.5s linear;
         }
 
         &--react::after {
-          width: 90%;
-        }
-
-        &--vue::after {
-          width: 75%;
+          animation: skill_bar_animation 1.6s linear 0s 1 forwards;
+          max-width: 90%;
         }
 
         &--node::after {
-          width: 85%;
+          animation: skill_bar_animation 1.6s linear 0.3s 1 forwards;
+          max-width: 85%;
+        }
+
+        &--vue::after {
+          animation: skill_bar_animation 1.6s linear 0.6s 1 forwards;
+          max-width: 75%;
         }
 
         &--php::after {
-          width: 70%;
+          animation: skill_bar_animation 1.6s linear 0.9s 1 forwards;
+          max-width: 70%;
         }
       }
     }
@@ -444,5 +450,14 @@ h6 {
 
   &__text {
     font-weight: 600;
+  }
+}
+
+@keyframes skill_bar_animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
   }
 }
