@@ -33,7 +33,8 @@ body {
   display: flex;
   flex-direction: column;
   // TODO: change default font later
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-size: 1rem;
   background: var(--secondary-variant-color);
   color: var(--secondary-contrast-color);
 
@@ -48,11 +49,38 @@ body {
 
 h1,
 h2,
-h3,
+h3 {
+  margin-block-end: 12px;
+}
+
 h4,
 h5,
 h6 {
   margin-block-end: 8px;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.35rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1.1rem;
 }
 
 // header and navigation
@@ -232,7 +260,7 @@ h6 {
 
       &__button {
         border: none;
-        font-size: 16px;
+        font-size: 1rem;
         cursor: pointer;
         align-self: flex-end;
         padding: 8px 16px;
@@ -335,7 +363,7 @@ h6 {
         border: none;
         color: var(--secondary-contrast-color);
         border-bottom: 1px solid var(--secondary-contrast-color);
-        font-size: 16px;
+        font-size: 1rem;
         transition: border-bottom-color 0.2s ease-in-out;
 
         &:focus {
@@ -354,7 +382,7 @@ h6 {
         background: transparent;
         border: none;
         color: var(--primary-color);
-        font-size: 16px;
+        font-size: 1rem;
         text-transform: uppercase;
         font-weight: 600;
         border: 1.5px solid var(--primary-color);
