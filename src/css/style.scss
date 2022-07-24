@@ -200,8 +200,10 @@ h6 {
     position: relative;
     z-index: 1;
     order: 2;
+    max-width: 580px;
+    width: 100%;
 
-    @media screen and (min-width: 880px) {
+    @media screen and (min-width: 1085px) {
       transform: translateY(0);
       background: transparent;
       order: 1;
@@ -212,7 +214,7 @@ h6 {
     margin: 0 auto;
     order: 1;
 
-    @media screen and (min-width: 880px) {
+    @media screen and (min-width: 1085px) {
       order: 2;
     }
   }
@@ -288,6 +290,9 @@ h6 {
   }
 
   &--home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex: 1 0 auto;
   }
 
