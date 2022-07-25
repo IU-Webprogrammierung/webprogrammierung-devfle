@@ -6,6 +6,12 @@ if (!!burgerBtn && !!navigation) {
   burgerBtn.addEventListener('click', () => {
     navigation.classList.toggle('navigation--open');
   });
+
+  burgerBtn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      navigation.classList.toggle('navigation--open');
+    }
+  });
 }
 
 let darkModeSettings = JSON.parse(window.localStorage.getItem('darkModeState')) ?? window.matchMedia('(prefers-color-scheme: dark)').matches;
