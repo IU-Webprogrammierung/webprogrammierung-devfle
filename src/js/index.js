@@ -35,3 +35,10 @@ darkModeButton.addEventListener('click', () => {
   setDarkMode(!darkModeSettings);
   window.localStorage.setItem('darkModeState', darkModeSettings);
 });
+
+darkModeButton.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    setDarkMode(!darkModeSettings);
+    window.localStorage.setItem('darkModeState', darkModeSettings);
+  }
+});
