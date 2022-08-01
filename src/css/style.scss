@@ -303,7 +303,7 @@ h6 {
   .blog-entry,
   .project-item {
     &:last-child {
-      margin-block-end: 40px;
+      margin-block-end: 42px;
     }
   }
 
@@ -336,6 +336,7 @@ h6 {
   &--projects {
     align-content: flex-start;
     gap: 32px;
+    margin-block-end: 42px;
     .project-item {
       justify-self: center;
 
@@ -509,11 +510,47 @@ h6 {
   }
 }
 
+.snackbar {
+  background-color: var(--primary-color);
+  padding: 10px 12px;
+  position: fixed;
+  border-radius: 4px;
+  right: 16px;
+  bottom: 8px;
+  animation: snackbar_animation 6s linear 1 forwards;
+  &__text {
+    color: var(--primary-contrast-color);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
 @keyframes skill_bar_animation {
   0% {
     width: 0%;
   }
   100% {
     width: 100%;
+  }
+}
+
+@keyframes snackbar_animation {
+  0% {
+    transform: translateX(500px);
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  27% {
+    transform: translateX(0px);
+  }
+  80% {
+    transform: translateX(0px);
+  }
+  85% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(500px);
   }
 }
