@@ -6,6 +6,12 @@ if (!!burgerBtn && !!navigation) {
   burgerBtn.addEventListener('click', () => {
     navigation.classList.toggle('navigation--open');
   });
+
+  burgerBtn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      navigation.classList.toggle('navigation--open');
+    }
+  });
 }
 
 let darkModeSettings = JSON.parse(window.localStorage.getItem('darkModeState')) ?? window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -34,4 +40,11 @@ const darkModeButton = document.querySelector('.header__icon--darkmode');
 darkModeButton.addEventListener('click', () => {
   setDarkMode(!darkModeSettings);
   window.localStorage.setItem('darkModeState', darkModeSettings);
+});
+
+darkModeButton.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    setDarkMode(!darkModeSettings);
+    window.localStorage.setItem('darkModeState', darkModeSettings);
+  }
 });
