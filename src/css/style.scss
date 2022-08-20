@@ -479,7 +479,9 @@ h6 {
           width: 0%;
           transition: width 0.5s linear;
         }
+      }
 
+      &--start-animation .skill-progress__bar {
         &--react::after {
           animation: skill_bar_animation 1.6s linear 0s 1 forwards;
           max-width: 90%;

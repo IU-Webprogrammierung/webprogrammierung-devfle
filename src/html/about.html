@@ -136,6 +136,14 @@
       new fullpage('#fullpage', {
         autoScrolling: true,
         navigation: true,
+
+        afterLoad() {
+          const activeSection = fullpage_api.getActiveSection();
+          const currentIndex = activeSection.index();
+          if (currentIndex === 1) {
+            document.querySelector('.skill-progress').classList.add('skill-progress--start-animation');
+          }
+        },
       });
     </script>
   </body>
