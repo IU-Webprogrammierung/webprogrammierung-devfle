@@ -35,7 +35,8 @@
   padding: 0;
 }
 
-body {
+body,
+.fp-enabled body {
   padding: 0 16px;
   min-height: 100vh;
   max-width: 1440px;
@@ -389,14 +390,10 @@ h6 {
 
   &--about {
     display: block;
+    margin-block-start: 0;
 
-    section {
-      margin: 52px 0;
-      display: grid;
-
-      @media screen and (min-width: 736px) {
-        margin: 72px 0;
-      }
+    .section {
+      margin: 0 auto;
     }
 
     .contact {
@@ -520,6 +517,10 @@ h6 {
       }
     }
   }
+}
+
+#fp-nav.fp-right span {
+  background-color: var(--primary-color);
 }
 
 .footer {
