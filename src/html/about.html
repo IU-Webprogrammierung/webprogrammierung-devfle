@@ -54,15 +54,15 @@
         </div>
       </div>
     </header>
-    <main id="content" class="content content--about">
-      <section class="about-info">
+    <main id="fullpage" class="content content--about">
+      <section class="section about-info">
         <h1 class="about-info__headline">About me</h1>
         <p class="about-info__text">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi sequi rerum tempora vero. Earum ducimus sint culpa minima eius aliquam iure, veritatis nostrum possimus accusamus eveniet esse
           vel distinctio aliquid?
         </p>
       </section>
-      <section class="skills">
+      <section class="section skills">
         <div class="skill-info">
           <h2 class="skill-info__headline">My Skills</h2>
           <p class="skill-info__text">
@@ -81,14 +81,14 @@
           <div aria-valuenow="70" role="progressbar" class="skill-progress__bar skill-progress__bar--php"></div>
         </div>
       </section>
-      <section class="quote">
+      <section class="section quote">
         <h2 class="quote__headline">My favorite quote</h2>
         <p class="quote__text">
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit minus nemo omnis exercitationem saepe quia, modi dicta pariatur nesciunt animi explicabo ratione.
           Reprehenderit, rem necessitatibus explicabo debitis in velit!"
         </p>
       </section>
-      <section class="experience">
+      <section class="section experience">
         <div class="experience-list">
           <div class="experience-list__item">
             <h4 class="experience-list__headline">Web-developer</h4>
@@ -113,7 +113,7 @@
           </p>
         </div>
       </section>
-      <section class="contact">
+      <section class="section contact">
         <h2 class="contact__headline" style="text-align: center">Get in touch with me</h2>
         <form class="contact__form">
           <input placeholder="Name" class="contact__input" type="text" />
@@ -128,5 +128,11 @@
     </footer>
     <script src="./../js/index.js"></script>
     <script src="./../../lib/fullpage/fullpage.min.js"></script>
+    <script>
+      new fullpage('#fullpage', {
+        autoScrolling: true,
+        navigation: true,
+      });
+    </script>
   </body>
 </html>
