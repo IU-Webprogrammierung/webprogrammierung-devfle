@@ -522,8 +522,12 @@ h6 {
   }
 }
 
-#fp-nav.fp-right span {
-  background-color: var(--primary-color);
+#fp-nav.fp-right {
+  right: 8px;
+
+  span {
+    background-color: var(--primary-color);
+  }
 }
 
 .footer {
