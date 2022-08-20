@@ -532,6 +532,11 @@ h6 {
   padding-block-end: 8px;
   flex: 1 0 auto;
 
+  &--is-fixed {
+    position: fixed;
+    bottom: 0;
+  }
+
   &__text {
     font-weight: 600;
   }
