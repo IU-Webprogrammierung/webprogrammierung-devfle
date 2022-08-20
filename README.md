@@ -2,12 +2,13 @@
 
 Welcome to my project repository. Here lies the source code for my portfolio website.
 
-#### The following tech stalk was used:
+#### The following tech stack was used:
 - HTML5
 - SCSS (CSS3)
 - JS (es6+)
 - JSON
 - Three.js
+- Fullpage.js
 - Markdown
 
 #### Tested and supported browser:
