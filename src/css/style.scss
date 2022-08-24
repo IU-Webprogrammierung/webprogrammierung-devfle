@@ -267,7 +267,7 @@ h6 {
       transform: translateX(400px);
       height: 100%;
       background: var(--secondary-color);
-      z-index: 3;
+      z-index: 12;
       transition: transform 0.35s linear, visibility 0.25s ease-in-out, opacity 0.25s ease-in-out;
       padding: 24px;
       display: flex;
