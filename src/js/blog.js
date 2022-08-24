@@ -3,6 +3,10 @@ const createBlogEntry = (blogEntry) => {
   const blogEntryTitle = document.createElement('h3');
   const blogEntryTitleTextNode = document.createTextNode(blogEntry.title);
 
+  const blogEntryTeaer = document.createElement('img');
+  blogEntryTeaer.setAttribute('src', `./../../media/img/blog/${blogEntry.image.path}`);
+  blogEntryTeaer.setAttribute('alt', `${blogEntry.image.alt}`);
+
   const blogEntryContent = document.createElement('p');
   const blogEntryContentTextNode = document.createTextNode(blogEntry.content);
 
@@ -13,12 +17,14 @@ const createBlogEntry = (blogEntry) => {
   blogEntryWrapper.appendChild(blogEntryTitle);
 
   blogEntryInfo.appendChild(blogEntryInfoTextNode);
+  blogEntryWrapper.appendChild(blogEntryTeaer);
   blogEntryWrapper.appendChild(blogEntryInfo);
 
   blogEntryContent.appendChild(blogEntryContentTextNode);
   blogEntryWrapper.appendChild(blogEntryContent);
 
   blogEntryInfo.classList.add('blog-entry__info');
+  blogEntryTeaer.classList.add('blog-entry__teaser');
   blogEntryTitle.classList.add('blog-entry__title');
   blogEntryContent.classList.add('blog-entry__content');
   blogEntryWrapper.classList.add('blog-entry');
