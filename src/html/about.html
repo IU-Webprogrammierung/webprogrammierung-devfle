@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Devfle - About</title>
+    <link rel="stylesheet" href="./../../lib/fullpage/fullpage.min.css" />
     <link rel="stylesheet" href="./../css/style.css" />
   </head>
   <body>
-    <header id="header" class="header">
+    <header id="header" class="header header--is-fixed">
       <a id="logo" class="header__logo" href="./../../index.html"
         ><svg role="img" aria-labelledby="logo-a11y" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 356.688 74.063">
           <title id="logo-a11y">website logo</title>
@@ -53,66 +54,61 @@
         </div>
       </div>
     </header>
-    <main id="content" class="content content--about">
-      <section class="about-info">
+    <main id="fullpage" class="content content--about">
+      <section class="section about-info">
         <h1 class="about-info__headline">About me</h1>
-        <p class="about-info__text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi sequi rerum tempora vero. Earum ducimus sint culpa minima eius aliquam iure, veritatis nostrum possimus accusamus eveniet esse
-          vel distinctio aliquid?
-        </p>
+        <p class="about-info__text">Hey! I'm Daniel and I develop software. I enjoy contributing to open source projects and trying out new technologies.</p>
       </section>
-      <section class="skills">
-        <div class="skill-info">
-          <h2 class="skill-info__headline">My Skills</h2>
-          <p class="skill-info__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sapiente officiis est neque non excepturi facilis sit quae nesciunt officia, facere ad architecto quisquam eius rerum
-            accusantium vel, odio ratione.
-          </p>
-        </div>
-        <div class="skill-progress">
-          <h4 class="skill-progress__headline">React</h4>
-          <div aria-valuenow="90" role="progressbar" class="skill-progress__bar skill-progress__bar--react"></div>
-          <h4 class="skill-progress__headline">NodeJS</h4>
-          <div aria-valuenow="85" role="progressbar" class="skill-progress__bar skill-progress__bar--node"></div>
-          <h4 class="skill-progress__headline">Vue</h4>
-          <div aria-valuenow="75" role="progressbar" class="skill-progress__bar skill-progress__bar--vue"></div>
-          <h4 class="skill-progress__headline">PHP</h4>
-          <div aria-valuenow="70" role="progressbar" class="skill-progress__bar skill-progress__bar--php"></div>
+      <section class="section skills">
+        <div class="section__grid-wrapper">
+          <div class="skill-info">
+            <h2 class="skill-info__headline">favorite technologies</h2>
+            <p class="skill-info__text">Over the time I could work with several programming languages, frameworks and libraries. Here are my favorites.</p>
+          </div>
+          <div class="skill-progress">
+            <h4 class="skill-progress__headline">React</h4>
+            <div aria-valuenow="90" role="progressbar" class="skill-progress__bar skill-progress__bar--react"></div>
+            <h4 class="skill-progress__headline">NodeJS</h4>
+            <div aria-valuenow="85" role="progressbar" class="skill-progress__bar skill-progress__bar--node"></div>
+            <h4 class="skill-progress__headline">Vue</h4>
+            <div aria-valuenow="75" role="progressbar" class="skill-progress__bar skill-progress__bar--vue"></div>
+            <h4 class="skill-progress__headline">PHP</h4>
+            <div aria-valuenow="70" role="progressbar" class="skill-progress__bar skill-progress__bar--php"></div>
+          </div>
         </div>
       </section>
-      <section class="quote">
+      <section class="section quote">
         <h2 class="quote__headline">My favorite quote</h2>
-        <p class="quote__text">
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit minus nemo omnis exercitationem saepe quia, modi dicta pariatur nesciunt animi explicabo ratione.
-          Reprehenderit, rem necessitatibus explicabo debitis in velit!"
-        </p>
+        <figure class="quote__text">
+          <blockquote>"Have no fear of perfection, you'll never reach it."</blockquote>
+          <figcaption>— Salvador Dalí</figcaption>
+        </figure>
       </section>
-      <section class="experience">
-        <div class="experience-list">
-          <div class="experience-list__item">
-            <h4 class="experience-list__headline">Web-developer</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe fugit optio quas officia rem omnis dolor aspernatur quos recusandae similique, nesciunt sed veniam possimus cupiditate
-              ipsa iste aliquid porro doloribus?
-            </p>
+      <section class="section experience">
+        <div class="section__grid-wrapper">
+          <div class="experience-list">
+            <div class="experience-list__item">
+              <h4 class="experience-list__headline">Web-developer</h4>
+              <p>
+                I could say I have turned my hobby into my profession. But that would be a lie. In my apprenticeship as a media designer, I realized that I enjoyed developing software solutions more
+                than designing them.
+              </p>
+            </div>
+            <div class="experience-list__item">
+              <h4 class="experience-list__headline">UX-Design</h4>
+              <p>
+                Since 2021, I am studying user experience design. The study fits very well with my main job as a developer and supports me in making decisions and developing software in a user-centric
+                way.
+              </p>
+            </div>
           </div>
-          <div class="experience-list__item">
-            <h4 class="experience-list__headline">UX-Design</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe fugit optio quas officia rem omnis dolor aspernatur quos recusandae similique, nesciunt sed veniam possimus cupiditate
-              ipsa iste aliquid porro doloribus?
-            </p>
+          <div class="experience-info">
+            <h2 class="experience-info__headline">My Experience</h2>
+            <p class="experience-info__text">There are currently two stages that are most important for my career path.</p>
           </div>
         </div>
-        <div class="experience-info">
-          <h2 class="experience-info__headline">My Experience</h2>
-          <p class="experience-info__text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem unde neque hic quidem veritatis, nostrum eveniet itaque cumque. Impedit, nemo ducimus? Quo, perferendis. Possimus
-            soluta maiores pariatur voluptates repellat dicta?
-          </p>
-        </div>
       </section>
-      <section class="contact">
+      <section class="section contact">
         <h2 class="contact__headline" style="text-align: center">Get in touch with me</h2>
         <form class="contact__form">
           <input placeholder="Name" class="contact__input" type="text" />
@@ -122,9 +118,27 @@
         </form>
       </section>
     </main>
-    <footer id="footer" class="footer">
+    <div class="snackbar">
+      <span class="snackbar__text">scroll down / up</span>
+    </div>
+    <footer id="footer" class="footer footer--is-fixed">
       <span class="footer__text">DESIGNED WITH ❤️ IN 2022</span>
     </footer>
     <script src="./../js/index.js"></script>
+    <script src="./../../lib/fullpage/fullpage.min.js"></script>
+    <script>
+      new fullpage('#fullpage', {
+        autoScrolling: true,
+        navigation: true,
+
+        afterLoad() {
+          const activeSection = fullpage_api.getActiveSection();
+          const currentIndex = activeSection.index();
+          if (currentIndex === 1) {
+            document.querySelector('.skill-progress').classList.add('skill-progress--start-animation');
+          }
+        },
+      });
+    </script>
   </body>
 </html>
