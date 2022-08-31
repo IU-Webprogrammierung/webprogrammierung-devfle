@@ -7,7 +7,7 @@
       "path": "01.jpg",
       "alt": "a glowing hello sign"
     },
-    "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    "content": "Welcome to my portfolio. Here you can find information about my person, projects and skills. I'm happy about your feedback to my blog posts, projects or just to my little portfolio page."
   },
   {
     "title": "Tutorial: All React Hooks",
@@ -17,7 +17,7 @@
       "path": "02.jpg",
       "alt": "a computer that has opened a development environment"
     },
-    "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    "content": "In this blog post, I'd like to introduce you to the React hooks I use most often. Of course there are a few more hooks and with the new major version of React 18 even more hooks have been added. This is really just about which hooks I use most often in my daily business. 1. useEffect: The useEffect hook, checks a passed primitive value and executes the callback on a change of that value. If you don't pass a value, useEffect is executed only once in the lifecycle. Data type object must be observed either with useMemo or with useCallback. 2. useState: With useState I can buffer a value. This value is not persisted, but is discarded with a new request. With a state update the respective component is rendered again."
   },
   {
     "title": "The CSS Layer API",
@@ -27,16 +27,6 @@
       "path": "03.jpg",
       "alt": "colorful hand drawn sketches from mobile application"
     },
-    "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-  },
-  {
-    "title": "How to write unit tests with jest",
-    "author": "Devfle",
-    "date": "19/04/2022",
-    "image": {
-      "path": "04.jpg",
-      "alt": "a notebook with several notes"
-    },
-    "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    "content": "The css layer api is a new way to prioritize styles. Until now you always had to prioritize cascade higher than the one you want to overwrite. In the past, this often led to long chaining of classes. With the Layer API it is now possible to assign whole CSS areas or even files to a layer and prioritize them. Thus, an ID does not necessarily have to overwrite a class more, if the ID is in a lower layer. Currently, the Layer API is supported by all major browsers."
   }
 ]
